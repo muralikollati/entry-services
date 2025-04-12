@@ -4,8 +4,8 @@ const axios = require("axios");
 const FormData = require("form-data");
 const cors = require("cors");
 const { GoogleGenAI } = require("@google/genai");
-const { db } = require("./firebase");
-const verifyAuth = require("../auth/verifyAuth");
+const { db } = require("./api/firebase");
+const verifyAuth = require("./auth/verifyAuth");
 const dotenv = require('dotenv');
 
 const app = express();
