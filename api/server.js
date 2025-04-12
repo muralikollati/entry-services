@@ -4,15 +4,15 @@ const axios = require("axios");
 const FormData = require("form-data");
 const cors = require("cors");
 const { GoogleGenAI } = require("@google/genai");
-const { db } = require("./service/firebase");
-const verifyAuth = require("./auth/verifyAuth");
+const { db } = require("./firebase");
+const verifyAuth = require("../auth/verifyAuth");
 const dotenv = require('dotenv');
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(verifyAuth);
-dotenv.config({ path: './.env' });
+dotenv.config({ path: '../.env' });
 
 const ELEVENLABS_API_KEY = process.env.ELEVENLABS_API_KEY;
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
