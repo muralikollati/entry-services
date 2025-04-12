@@ -274,6 +274,10 @@ app.delete("/person-delete/:id", verifyAuth, async (req, res) => {
   }
 });
 
-app.listen(5001, "0.0.0.0", () => {
-  console.log("Server is running on port 5001");
-});
+// app.listen(5001, "0.0.0.0", () => {
+//   console.log("Server is running on port 5001");
+// });
+
+module.exports = (req, res) => {
+  app(req, res);  // Use the express app to handle the request
+};
